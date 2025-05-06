@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>みんなの旅ログ</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito:200,600"
+            rel="stylesheet"
+        />
+        <style>
+            h1 {
+                text-align: center;
+                font-size: 50px;
+                font-family: "游明朝", "Yu Mincho", YuMincho,
+                    "Hiragino Mincho Pro", serif;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>みんなの旅ログ</h1>
+        <div class="search">
+            <form action="" method="post">
+                <input type="text" name="search_name" placeholder="国名" />
+                <input type="submit" name="submit" value="検索" />
+            </form>
+        </div>
+        <div class="title">
+            <p>タイトル</p>
+            <input
+                type="title"
+                name="title_name"
+                placeholder="タイトルを入力"
+            />
+        </div>
+        <div class="name">
+            <p>ニックネーム</p>
+            <input
+                type="nickname"
+                name="nickname"
+                placeholder="ニックネームを入力"
+            />
+        </div>
+        <div class="continent">
+            <p>大陸を選択</p>
+            <input type="radio" name="continent" value="asia" />アジア
+            <input type="radio" name="continent" value="europe" />ヨーロッパ
+            <input type="radio" name="continent" value="north_america" />北米
+            <input type="radio" name="continent" value="south_america" />南米
+            <input type="radio" name="continent" value="africa" />アフリカ
+        </div>
+        <div class="country">
+            <p>国を選択</p>
+            <select name="country">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="travel_period">
+            <p>旅行期間</p>
+            <input
+                type="travel_period"
+                name="travel_period"
+                placeholder="観光地名を入力"
+            />
+        </div>
+        <div class="tourist_spot">
+            <p>観光地</p>
+            <input
+                type="tourist_spot"
+                name="tourist_spot"
+                placeholder="観光地名を入力"
+            />
+        </div>
+        <div class="food">
+            <p>食事</p>
+            <input type="food" name="food" placeholder="食べたものを入力" />
+        </div>
+        <div class="hotel">
+            <p>ホテル</p>
+            <input type="hotel" name="hotel" placeholder="ホテル名を入力" />
+        </div>
+        <div class="money">
+            <p>旅行費用</p>
+            <input type="money" name="money" placeholder="旅行費用を入力" />
+        </div>
+        <div class="impression">
+            <p>感想</p>
+            <textarea name="impression" placeholder="自由記載"></textarea>
+        </div>
+        <form action="" method="post">
+            <button type="submit" name="add">投稿</button>
+        </form>
+    </body>
+</html>
