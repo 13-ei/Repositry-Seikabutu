@@ -25,5 +25,16 @@ class Log extends Model
         'impressions_photo',
         'user_id',
         'country_id',
+        'continent_id',
     ];
+
+    public function country()
+    {
+        return $this->belongsTo(Country::class);
+    }
+
+    public function continent()
+    {
+        return $this->belongsTo(Continent::class);
+    }
 }

@@ -25,9 +25,16 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/', [ContinentController::class, 'index']);
+    Route::get('/logs/continent/{continent}', [ContinentController::class, 'show'])->name('continents.show');
+
     Route::get('/countries/continent/{continent_id}', [CountryController::class, 'getByContinent']);
+    Route::get('/logs/search', [CountryController::class, 'searchForm']);
+    Route::get('/logs/search/results', [CountryController::class, 'search'])->name('logs.search');
     Route::post('/logs', [LogController::class, 'store']);
     Route::get('/logs/{log}', [LogController::class, 'show']);
+    Route::get('logs/{log}/edit', [LogController::class, 'edit']);
+    Route::put('/logs/{log}', [LogController::class, 'update']);
+    Route::get('/logs/continent/{continent_id}', [LogController::class, 'continentList']);
     Route::post('/logs/upload-image', [LogController::class, 'uploadImageToDropbox'])->name('logs.uploadImage');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

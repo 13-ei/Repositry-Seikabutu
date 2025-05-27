@@ -17,4 +17,9 @@ class Continent extends Model
     {
         return $this->hasMany(Country::class);
     }
+
+    public function logs()
+    {
+        return $this->hasManyThrough(Log::class, Country::class);
+    }
 }
